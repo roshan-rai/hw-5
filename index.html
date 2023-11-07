@@ -23,10 +23,14 @@
     <button type="button" onclick="myFunction()">Click me to change the format!</button>
 
     <p id="changeText">Click the button below to change this text!</p>
+    <button type="button" onclick="changeText()">Change Text</button>
 
-    <button type="button" onclick="changeTextContent()">Change Text</button>
+    <p id="changeFont">Click the button below to change the font style!</p>
+    <button type="button" onclick="changeFontStyle()">Change Font Style</button>
 
-    <img id="toggleImage" src="girafe.jpg" width="200" height="200">
+    <button type="button" onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <img id="toggleImage" src="giraffe.jpg" width="200" height="200">
     <button type="button" onclick="toggleImage()">Toggle Image</button>
 
     <audio id="myAudio">
@@ -35,17 +39,26 @@
     <button type="button" onclick="playSound()">Play Sound</button>
 
     <script>
-      function changeTextContent() {
+      function changeText() {
         var changeText = document.getElementById("changeText");
-        changeText.innerHTML = "The sound of the audio is cat!";
+        changeText.innerHTML = "Text has been changed!";
+      }
+
+      function changeFontStyle() {
+        var changeFont = document.getElementById("changeFont");
+        changeFont.style.fontFamily = "Arial, sans-serif";
+      }
+
+      function changeBackgroundColor() {
+        document.body.style.backgroundColor = "lightblue";
       }
 
       function toggleImage() {
         var image = document.getElementById("toggleImage");
-        if (image.src.endsWith("girafe.jpg")) {
+        if (image.src.endsWith("giraffe.jpg")) {
           image.src = "g.jpg";
         } else {
-          image.src = "girafe.jpg";
+          image.src = "giraffe.jpg";
         }
       }
 
