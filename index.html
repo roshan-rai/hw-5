@@ -20,7 +20,7 @@
       }
     </script>
 
-    <button type="button" onclick="myFunction()">Click Me to change the format!</button>
+    <button type="button" onclick="myFunction()">Click me to change the format!</button>
 
     <p id="changeText">Click the button below to change this text!</p>
 
@@ -30,22 +30,22 @@
     <button type="button" onclick="toggleImage()">Toggle Image</button>
 
     <audio id="myAudio">
-      <source src="sound.mp3" type="audio/mpeg">
+      <source src="Original-cat-sound-meow.mp3" type="audio/mpeg">
     </audio>
     <button type="button" onclick="playSound()">Play Sound</button>
 
     <script>
       function changeTextContent() {
         var changeText = document.getElementById("changeText");
-        changeText.innerHTML = "Text has been changed!";
+        changeText.innerHTML = "The sound of the audio is cat!";
       }
 
       function toggleImage() {
         var image = document.getElementById("toggleImage");
-        if (image.src.endsWith("image1.jpg")) {
-          image.src = "image2.jpg";
+        if (image.src.endsWith("girafe.jpg")) {
+          image.src = "g.jpg";
         } else {
-          image.src = "image1.jpg";
+          image.src = "girafe.jpg";
         }
       }
 
